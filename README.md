@@ -20,7 +20,7 @@ Each data file has these columns:
 
 Use R and install these packages before running the scripts:
 
-```r
+```r   
 install.packages(c("data.table", "lme4", "ggplot2", "patchwork"))
 ```
 
@@ -55,6 +55,6 @@ The supplementary script writes `dataset_s1_community_partially_pooled_slopes.cs
 
 These generated results and figures are not included in this repository snapshot.
 
-## Data provenance and sharing
+## Data provenance
 
 The analysis data are derived from Reddit, X, YouTube, and Stack Exchange material. Removing text and replacing item IDs reduces direct identification and makes the files sufficient for reproducing the statistical models. The files here do not reproduce the original text-scoring step; they start from the already-scored features.
