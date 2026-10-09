@@ -53,7 +53,7 @@ install.packages(c("data.table", "lme4", "ggplot2", "patchwork"))
 
 The supplementary script writes `dataset_s1_community_partially_pooled_slopes.csv` and `dataset_s2_fixed_effects.csv` directly into `supplementary_materials/`, along with generated tables and figures in its `tables/` and `figures/` subfolders. Analysis outputs go into `analysis/five_corpus_multilevel_results/`. 
 
-These generated results and figures are not included in this repository snapshot.
+These generated results and figures are not included in the repository.
 
 ## Data provenance
 
