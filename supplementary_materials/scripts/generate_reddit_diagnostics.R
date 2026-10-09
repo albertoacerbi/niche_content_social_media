@@ -39,7 +39,7 @@ if (!all(required_columns %in% names(data))) {
   stop("Input must contain: ", paste(required_columns, collapse = ", "),
        call. = FALSE)
 }
-# pandas read_csv treats empty community fields as missing; dropna then removes them.
+
 data <- data[complete.cases(data) & nzchar(community)]
 for (column in c("engagement", features)) {
   if (!is.numeric(data[[column]]) || any(!is.finite(data[[column]]))) {
@@ -62,7 +62,6 @@ for (feature in features) {
   data[, (paste0("z_", feature)) := population_z(get(feature))]
 }
 
-# Equivalent to numpy.linalg.lstsq(..., rcond=None), including rank-deficient X.
 least_squares <- function(x, y) {
   decomposition <- svd(x)
   keep <- decomposition$d > max(dim(x)) * .Machine$double.eps * max(decomposition$d)
